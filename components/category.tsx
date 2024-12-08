@@ -20,7 +20,7 @@ interface BookData {
 
 export default function Category() {
   const [filtered, setFilter] = useState<BookData[]>([]);
-  const [dataStore, setDataStore] = useState<BookData | null>(null);
+  // const [dataStore, setDataStore] = useState<BookData | null>(null);
   const [btn, setBtnText] = useState('');
   const [active, setActive] = useState('');
   const [selectedBook, setSelectedBook] = useState<BookData | null>(null); // Define selectedBook state

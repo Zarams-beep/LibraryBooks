@@ -6,7 +6,7 @@ import {
 } from "react-icons/ti";
 import { SlSocialYoutube } from "react-icons/sl";
 import { MdAlternateEmail } from "react-icons/md";
-import { LuMenuSquare } from "react-icons/lu";
+import { LuMenu } from "react-icons/lu";
 import { FaXmark } from "react-icons/fa6";
 import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
 import { useState, useEffect } from "react";
@@ -54,7 +54,7 @@ export default function Header() {
 
             {is930 && (
               <div className="divMenu" onClick={handleOpen}>
-                {isOpen ? <FaXmark /> : <LuMenuSquare />}
+                {isOpen ? <FaXmark /> : <LuMenu />}
               </div>
             )}
 
