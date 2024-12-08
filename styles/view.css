@@ -1,0 +1,110 @@
+.viewPage{
+    @apply ml-[15rem] mr-4 mt-[7rem];
+  }
+  .viewSection{
+    @apply h-auto grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+  .styleCard{
+    @apply flex items-center justify-between w-full;
+  }
+  .styleCard img{
+    @apply h-full w-[30rem]
+  }
+  
+  @media all and (max-width:1170px) {
+    .styleCard{
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+  .cardCenter{
+    @apply flex items-center justify-center flex-col text-center leading-[2rem] w-full bg-[#3e2723] text-[#e4c282];
+  }
+  @media all and (max-width:590px) {
+    .asidePart{
+      padding-right: .5rem;
+    }
+    .header2{
+      margin-left: 10.5rem;
+    }
+    .viewPage{
+      margin-left: 11.5rem;
+    }
+    .asidePart .headerPart {
+      padding-left: 0rem;
+    }
+    .profileContainer p{
+      font-size: .8rem;
+    }
+  }
+  @media all and (max-width:530px) {
+    .header2{
+      margin-left: 8.2rem;
+    }
+    .list ul li,.list ul li button{
+      font-size: .9rem;
+    }
+    .headerPart p{
+      font-size: 1rem;
+    }
+    .viewPage{
+      margin-left: 9.4rem;
+    }
+    .cardCenter h4{
+      font-size: 1.5rem;
+    }
+  }
+  @media all and (max-width:500px) {
+    .header2{
+      display: flex;
+      padding-left: .2rem;
+    }
+    .headerPart{
+      width: 30%;
+    }
+    .searchHeader{
+      width: 100%;
+      margin-left: .5rem;
+    }
+    .sectionNotes,.divContain{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .sectionNotes{
+      gap: 1.5rem;
+    }
+    .divContain{
+      margin-right: 1rem;
+      position: relative;
+    }
+    .asidePart{
+      display: none;
+    }
+    .header2,.viewPage{
+      margin-left: 0;
+    }
+    .headerPart p{
+      font-size: .8rem;
+    }
+  }
+  @media all and (max-width:350px) {
+    .styleCard{
+      width: 85%;
+    }
+  
+  }
+  
+  /* .flexBox{
+    display: flex;
+    align-items: center;
+  } */
+  .smallBtn{
+    @apply flex items-center gap-[.5rem];
+  }
+  .btnValue{
+    @apply text-[#e4c282] hover:cursor-pointer text-[1.2rem] hover:text-[dodgerblue];
+    transition: color .3s ease-in-out;
+  }
+  
