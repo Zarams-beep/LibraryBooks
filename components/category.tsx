@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import { GiBlackBook } from "react-icons/gi";
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 import { useState, useEffect } from "react";
-import { ratingAmount, ratingIt, rating } from "@/utils/storage";
+import { ratingIt, rating } from "@/utils/storage";
 import library from "@/utils/library.json";
 import Image from "next/image";
 
@@ -20,7 +20,6 @@ interface BookData {
 
 export default function Category() {
   const [filtered, setFilter] = useState<BookData[]>([]);
-  const [dataStore, setDataStore] = useState<BookData | null>(null);
   const [btn, setBtnText] = useState('');
   const [active, setActive] = useState('');
   const [selectedBook, setSelectedBook] = useState<BookData | null>(null); // Define selectedBook state
@@ -125,7 +124,7 @@ export default function Category() {
                   <div>{fi.publication_year}</div>
                   <div>{fi.genre[0]}, {fi.genre[1]}</div>
                   <div className="ratin2">
-                    <p className="rating2">{ratingIt[fi.id] ?? 'No rating'}</p>
+                    <div className="rating2">{ratingIt[fi.id] ?? 'No rating'}</div>
                     <p>{rating[fi.id] ?? 'No rating'}</p>
                   </div>
                 </div>

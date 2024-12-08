@@ -1,6 +1,6 @@
 "use client";
 import { TbBooks } from "react-icons/tb";
-import { Container, Typography, Button, TextField, Select, MenuItem } from "@mui/material";
+import { Container, Typography, Button, TextField } from "@mui/material";
 import { ImGoogle3 } from "react-icons/im";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -29,7 +29,7 @@ export default function SignUp1() {
     if (type === "password") setShowPassword((prev) => !prev);
   };
 
-  const onSubmit = async (data: LoginFormData) => {
+  const onSubmit = async () => {
     setIsLoading(true);
     setTimeout(() => {
       alert("Sign-in successful!");
