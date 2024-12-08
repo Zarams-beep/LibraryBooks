@@ -6,7 +6,7 @@ import { ratingIt, rating, } from "@/utils/storage";
 import Link from "next/link";
 import Image from "next/image";
 import library from "@/utils/library.json";
-import { stringify } from "flatted";
+// import { stringify } from "flatted";
 interface Book {
   id: number;
   title: string;
@@ -82,8 +82,8 @@ export default function HomePage() {
       if (typeof window !== "undefined") {
         localStorage.setItem("img", selectedBook.cover_image);
         localStorage.setItem("bookData", JSON.stringify(selectedBook));
-        localStorage.setItem("rating", ratingIt[selectedBook.id]);
-        localStorage.setItem("ratingNumber", stringify(rating[selectedBook.id]));
+        localStorage.setItem("rating", ratingIt[selectedBook.id].toString());
+        localStorage.setItem("ratingNumber", rating[selectedBook.id].toString());
       }
     }
   }, [selectedBook]);
