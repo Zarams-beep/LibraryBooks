@@ -31,7 +31,7 @@ export default function SignUp1() {
     if (type === "confirmPassword") setShowConfirmPassword((prev) => !prev);
   };
 
-  const onSubmit = async (data: SignUpFormData) => {
+  const onSubmit = async () => {
     setIsLoading(true);
     setTimeout(() => {
       alert("Sign-up successful!");

@@ -24,7 +24,7 @@ export default function Category() {
   const [active, setActive] = useState('');
   const [selectedBook, setSelectedBook] = useState<BookData | null>(null); // Define selectedBook state
   const listGenre = ['Fiction', 'Classic', 'Dystopian', 'Science Fiction', 'Adventure', 'Fantasy'];
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [, setCurrentIndex] = useState(0);
 
   const handleGenre = (genre: string) => {
     setBtnText(genre);

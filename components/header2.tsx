@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { RxCross2 } from "react-icons/rx";
 import { IoMdMenu } from "react-icons/io";
 import { FaShoppingCart } from "react-icons/fa";
-import { useState, useEffect} from "react";
+import { useState} from "react";
 import Link from "next/link";
 import { MdCategory,MdLogout} from "react-icons/md";
 import { GiBookmarklet } from "react-icons/gi";
