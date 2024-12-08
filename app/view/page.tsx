@@ -13,9 +13,9 @@ import {
 import { ratingAmount, ratingIt, rating } from "@/utils/storage";
 import { FaPlus } from "react-icons/fa6";
 import { FiMinus } from "react-icons/fi";
-// import { useMediaQuery } from "react-responsive";
 import WelcomeComponent from "@/components/welcomeComponent";
 import Category from "@/components/category";
+import Upcoming from "@/components/upcoming";
 // Define types for your data
 interface BookData {
   id: number;
@@ -71,8 +71,6 @@ export default function ViewBook2() {
   // Memoize the total for optimization
   const totalPrice = useMemo(() => count * ratingAmounts, [count, ratingAmounts]);
 
-  // Media query for small screens
-  // const is400 = useMediaQuery({ query: "(max-width: 400px)" });
 
   return (
     <>
@@ -147,6 +145,7 @@ export default function ViewBook2() {
         </Container>
         <WelcomeComponent/>
         <Category/>
+        <Upcoming/>
       </section>
     </>
   );

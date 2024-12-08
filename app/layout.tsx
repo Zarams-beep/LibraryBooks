@@ -8,6 +8,8 @@ import '@/styles/sideBar.css';
 import '@/styles/view.css';
 import '@/styles/welcome.css';
 import '@/styles/category.css';
+import '@/styles/upcoming.css';
+import '@/styles/footer.css';
 import { Provider } from "react-redux";
 import store from "@/store/store";
 import MetaData from "../components/metaData";

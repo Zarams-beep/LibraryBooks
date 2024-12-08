@@ -40,7 +40,7 @@
   .welcomePart2 p{
     @apply text-center md4:text-[.9rem];
   }
-  .cardWelcome{
+  .welcomePart2 .cardWelcome{
     @apply bg-[#3e2723] text-[#e4c282];
   }
   .welcomePart2 .readMore{

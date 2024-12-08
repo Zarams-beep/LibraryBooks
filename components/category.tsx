@@ -106,7 +106,7 @@ export default function Category() {
               <a
                 href="/viewbook2"
                 className="linkStyle"
-                onClick={() => handleStorage(fi)} // Corrected this line
+                onClick={() => handleStorage(fi)} 
               >
                 <div className="imgP">
                   <Image
