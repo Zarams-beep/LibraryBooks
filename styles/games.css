@@ -1,0 +1,11 @@
+
+.cardGame .div1{
+  @apply flex items-center lg:flex-row flex-col bg-[#3e2723] text-[#e4c282];
+  }
+  .cardGame .div1 img{
+    @apply h-full w-full lg:w-[30rem]
+  }
+  .cardGame .smallDiv{
+    @apply flex flex-col justify-center items-center
+  }
+  

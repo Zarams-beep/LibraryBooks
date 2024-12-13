@@ -1,0 +1,42 @@
+.asidePart{
+    @apply fixed top-0 pr-16 bottom-0 overflow-x-auto z-[100] text-[#f5deb3] bg-[#3e2723] py-[1rem];
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  @media all and (max-width:700px) {
+    .asidePart{
+      display: none
+    }
+  }
+  .asidePart .headerPart {
+    @apply text-[1.4rem] pl-4 mb-4;
+  }
+  .headerPart .vault{
+    @apply mb-0 text-center;
+  }
+  .headerPart .hub{
+    @apply text-center mt-0;
+  }
+  .list{
+    @apply ml-0 flex flex-col gap-[2rem];
+  }
+  .list ul{
+    @apply list-none grid gap-8 ml-2;
+    grid-template-columns: 1fr;
+  }
+  .list ul li a{
+    @apply flex items-center gap-[.4rem] text-[1.2rem];
+  }
+  .list ul li button{
+    @apply text-[1.5rem] pr-8 bg-[gainsboro] border-none rounded-[2rem];
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  .list .relativeLi, .list .relativeLi2{
+    @apply relative;
+  }
+  .list .relativeLi p{
+    @apply absolute text-[red] left-[.5rem] md1:top-0 top-[-.7rem] text-[.6rem] bottom-0 font-bold md1:text-[.8rem];
+  }
+  .list .relativeLi2 p{
+    @apply text-[red] absolute left-[.2rem] md1:left-[.4rem]  text-[.6rem] md1:text-[.8rem] font-bold top-[-.2rem];
+  }
+  

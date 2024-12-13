@@ -1,0 +1,51 @@
+.welcomeComponent{
+    @apply my-[4rem];
+  }
+  .welcomePart1{
+    @apply text-center;
+  }
+  .divLine{
+    @apply flex items-center gap-[.5re];
+  }
+  .divLine .icon{
+    @apply text-[4rem]
+  }
+  .line{
+    @apply w-full;
+    border: 1px solid black;
+  }
+  .lin{
+    @apply ml-[5rem] md4:ml-[10rem];
+  }
+  .lin2{
+    @apply mr-[5rem] md4:mr-[10rem];
+  }
+  .welcomePart2{
+    @apply grid gap-4 mt-4;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+  .welcomePart2 button{
+    @apply border-none text-[1.5rem];
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  .btnAction{
+    @apply flex items-center;
+  }
+  .welcomePart1 h4{
+    @apply text-[2rem] md4:text-[2.5rem];
+  }
+  .welcomePart2 h6{
+    @apply md4:text-[1.5rem] text-[1rem] text-center font-bold;
+  }
+  .welcomePart2 p{
+    @apply text-center md4:text-[.9rem];
+  }
+  .welcomePart2 .cardWelcome{
+    @apply bg-[#3e2723] text-[#e4c282];
+  }
+  .welcomePart2 .readMore{
+    @apply underline text-center leading-[4rem] hover:cursor-pointer hover:text-[#e454e4];
+  }
+  .cardWelcomeAction{
+    @apply flex items-center flex-col justify-center
+  }

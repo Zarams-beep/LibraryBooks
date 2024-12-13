@@ -1,0 +1,90 @@
+.viewPage{
+    @apply ml-[15rem] mr-4 mt-[7rem];
+  }
+  .viewSection{
+    @apply h-auto grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+  .styleCard{
+    @apply flex items-center justify-between w-full;
+  }
+  .styleCard img{
+    @apply h-full w-[30rem]
+  }
+  
+  @media all and (max-width:1170px) {
+    .styleCard{
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+  .cardCenter{
+    @apply flex items-center justify-center flex-col text-center leading-[2rem] w-full bg-[#3e2723] text-[#e4c282];
+  }
+  @media all and (max-width:590px) {
+    .profileContainer p{
+      font-size: .8rem;
+    }
+  }
+  @media all and (max-width:530px) {
+    .list ul li,.list ul li button{
+      font-size: .9rem;
+    }
+    .headerPart p{
+      font-size: 1rem;
+    }
+    .cardCenter h4{
+      font-size: 1.5rem;
+    }
+  }
+  @media all and (max-width:700px) {
+    .header2{
+      display: flex;
+      padding-left: .2rem;
+    }
+    .header2,.viewPage{
+      margin-left: 0;
+    }
+    .headerPart{
+      width: 30%;
+    }
+    .searchHeader{
+      width: 100%;
+      margin-left: .5rem;
+    }
+    .styleCard img{
+      @apply h-full w-full
+    }
+  }
+  @media all and (max-width:500px) {
+    .sectionNotes,.divContain{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .sectionNotes{
+      gap: 1.5rem;
+    }
+    .divContain{
+      margin-right: 1rem;
+      position: relative;
+    }
+    .headerPart p{
+      font-size: .8rem;
+    }
+  }
+  @media all and (max-width:350px) {
+    .styleCard{
+      width: 85%;
+    }
+  
+  }
+
+  .smallBtn{
+    @apply flex items-center gap-[.5rem];
+  }
+  .btnValue{
+    @apply text-[#e4c282] hover:cursor-pointer text-[1.2rem] hover:text-[dodgerblue];
+    transition: color .3s ease-in-out;
+  }
+  

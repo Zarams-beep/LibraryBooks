@@ -1,0 +1,44 @@
+.footer1{
+  @apply mt-8 ml-[14rem] z-[-2];
+  }
+  
+  .newsLetter{
+    @apply text-[#e4c282] ml-0 1sm:px-0 px-3 1sm:ml-8 pt-[12rem] w-full 1sm:w-[20rem];
+  }
+  .newsLetter h3{
+    @apply mb-[.5rem] text-[2.5rem] 1sm:text-[4rem];
+  }
+  .newsLetter p{
+    @apply 1sm:text-[16px] text-[14px] mb-4;
+  }
+  .newsLetter .subs{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .subs input{
+    @apply w-full h-[3rem] pl-[.5rem] border-none rounded-[.4rem] mb-4;
+  }
+  .subs button{
+    @apply border-none rounded-[.4rem] bg-[#e4c282] text-[#3e2723] flex justify-center items-center text-center w-full;
+  }
+  .footer2{
+    @apply bg-[#3e2723]
+  }
+  .footer2,.footerIt2{
+    @apply h-[20rem] ml-[14rem] flex items-center justify-center flex-col text-[#e4c282];
+  }
+  @media all and (max-width:700px) {
+    .footer1,.footer2{
+      margin-left: 0;
+    }
+  }
+  .footerIt,.footerIt2{
+    margin-left: 0;
+  }
+  .logoFooter{
+    @apply flex gap-[.5rem] items-end text-[3rem] justify-center mb-4;
+  }
+  .footer2 .footer{
+    @apply w-[80%] text-center;
+  }
+  

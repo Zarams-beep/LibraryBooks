@@ -1,0 +1,77 @@
+.sectionUpcoming{
+    @apply flex items-center md3:flex-row flex-col justify-center gap-[10px] md3:gap-4;
+  }
+  .sectionUpcoming button{
+    @apply border-none hover:bg-[#3e2723] hover:text-[#e4c282] bg-[#e4c282] text-[#3e2723] hover:cursor-pointer md3:text-[16px] text-[.7rem];
+    transition: background-color .3s ease-in-out, color .3s ease-in-out, cursor .3s ease-in-out;
+  }
+  @media all and (max-width:700px) {
+    .sectionUpcoming button{
+      width: 100%;
+    }
+  }
+  .seeVisible {
+    @apply mt-[5rem] flex items-center gap-4 text-center text-[#3e2723];
+  }
+  .invisbile {
+    display: none;
+  }
+  .event1 .side1{
+    @apply w-[80%];
+  }
+  
+  .event1 .side2 {
+    @apply w-full;
+  }
+  .event1 .side2 img{
+    @apply w-full h-[25rem] object-cover rounded-[2rem];
+  }
+  .calendar{
+    @apply text-[#3e2723] pb-8 flex items-center justify-center gap-1;
+  }
+  @media all and (max-width:942px) {
+    .seeVisible{
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .event1 .side1{
+      @apply w-full
+    }
+    .event1 h4{
+      font-size: 1.2rem;
+    }
+    .side1 .calendar{
+      font-size: .7rem;
+    }
+  }
+  
+  .side1 h4{
+    @apply font-bold pb-4;
+  }
+  .viewMore{
+    @apply text-center underline;
+  }
+  .hidView{
+    display: none;
+  }
+  .viewIt{
+    display: block;
+  }
+  
+  .news{
+    @apply grid gap-8 mt-4 text-[#3e2723];
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+  .news .news1{
+    @apply text-justify border-none p-4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  .news1 h5{
+    @apply mb-4 font-bold;
+  }
+  @media all and (max-width:340px) {
+    .news .news1{
+      width: 80%;
+    }
+  }
+  
