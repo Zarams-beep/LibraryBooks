@@ -64,14 +64,18 @@ import Footer from "@/components/footer";
         
       };
     }, [gameCards.length, interval]);
-  
-    const count = localStorage.getItem("count");
-const parsedCount = count ? JSON.parse(count) : 0;
-
-  
+    const [count, setCount] = useState<number>(0);
+    // Ensure this is only run on the client side
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const savedCount = localStorage.getItem("count");
+      const parsedCount = savedCount ? JSON.parse(savedCount) : 0;
+      setCount(parsedCount);  
+    }
+  }, []);
     return (
       <>
-        <SideBar number={parsedCount} />
+        <SideBar number={count} />
         <section className="viewPage">
           <Container>
             {/* <div className="divArrows divArrows2">

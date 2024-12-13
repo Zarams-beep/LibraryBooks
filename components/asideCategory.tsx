@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import SideBar from "@/components/sideBar";
 import {
   Container,
@@ -12,30 +12,37 @@ import Footer from "@/components/footer";
 import Image from "next/image";
 
 interface Book {
-    id: number;
-    title: string;
-    author: string;
-    publication_year: number | string;
-    genre: string[];
-    cover_image: string;
-  }
+  id: number;
+  title: string;
+  author: string;
+  publication_year: number | string;
+  genre: string[];
+  cover_image: string;
+}
 
-export default function AsideCategory () {
-    const count = localStorage.getItem("count");
-    const parsedCount = count ? JSON.parse(count) : 0;
-      const books = library;
+export default function AsideCategory() {
+  const [count, setCount] = useState<number>(0);
+
+  // Ensure this is only run on the client side
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const savedCount = localStorage.getItem("count");
+      const parsedCount = savedCount ? JSON.parse(savedCount) : 0;
+      setCount(parsedCount);  
+    }
+  }, []);
+
+  const books = library;
   const ratings = rating;
   const [selectedBook, setSelectedBook] = useState<Book | null>(null);
 
-   // Store book data to localStorage when selectedBook changes
-   useEffect(() => {
-    if (selectedBook) {
-      if (typeof window !== "undefined") {
-        localStorage.setItem("img", selectedBook.cover_image);
-        localStorage.setItem("bookData", JSON.stringify(selectedBook));
-        localStorage.setItem("rating", ratingIt[selectedBook.id].toString());
-        localStorage.setItem("ratingNumber", rating[selectedBook.id].toString());
-      }
+  // Store book data to localStorage when selectedBook changes
+  useEffect(() => {
+    if (selectedBook && typeof window !== "undefined") {
+      localStorage.setItem("img", selectedBook.cover_image);
+      localStorage.setItem("bookData", JSON.stringify(selectedBook));
+      localStorage.setItem("rating", ratingIt[selectedBook.id].toString());
+      localStorage.setItem("ratingNumber", rating[selectedBook.id].toString());
     }
   }, [selectedBook]);
 
@@ -52,14 +59,12 @@ export default function AsideCategory () {
       return acc;
     }, {} as Record<string, Book[]>);
   };
-  
-  const booksByGenre = groupByGenre(books);
-  
 
+  const booksByGenre = groupByGenre(books);
 
   return (
     <>
-      <SideBar number={parsedCount} />
+      <SideBar number={count} />
       <section className="viewPage">
         <Container>
           {Object.keys(booksByGenre).map((genre) => (
@@ -71,36 +76,36 @@ export default function AsideCategory () {
                 {booksByGenre[genre].map((book) => (
                   <li key={book.id}>
                     <Link
-                      href={"/view"} 
+                      href={"/view"}
                       className="linkStyle"
                       onClick={() => handleStorage(book)}
                     >
                       <div className="imgP">
-                      <Image
-                      src={book.cover_image}
-                      alt={book.title}
-                      width={1000}
-                      height={1000}
-                      loading="lazy"
-                      className="image"
-                    />
+                        <Image
+                          src={book.cover_image}
+                          alt={book.title}
+                          width={1000}
+                          height={1000}
+                          loading="lazy"
+                          className="image"
+                        />
                       </div>
                       <div className="box">
-                    <div>{book.title}</div>
-                    <div>{book.author}</div>
-                    <div>{book.publication_year}</div>
-                    <div>
-                      {book.genre.map((g, index) => (
-                        <span key={index} className="genreItem">
-                          {g}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="rating">
-                      <div className="rating1">{ratingIt[book.id]}</div>
-                      <div>{ratings[book.id]}</div>
-                    </div>
-                  </div>
+                        <div>{book.title}</div>
+                        <div>{book.author}</div>
+                        <div>{book.publication_year}</div>
+                        <div>
+                          {book.genre.map((g, index) => (
+                            <span key={index} className="genreItem">
+                              {g}
+                            </span>
+                          ))}
+                        </div>
+                        <div className="rating">
+                          <div className="rating1">{ratingIt[book.id]}</div>
+                          <div>{ratings[book.id]}</div>
+                        </div>
+                      </div>
                     </Link>
                   </li>
                 ))}
@@ -109,7 +114,7 @@ export default function AsideCategory () {
           ))}
         </Container>
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
-};
+}
